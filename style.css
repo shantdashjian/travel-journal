@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 55px;
+}
+
+/* Reset */
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h2, h3, h4 {
+    margin: 0;
+}
+
+/* Utility classes */
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+header {
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    height: var(--header-height);
+    background: #F55A5A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+header i {
+    font-size: 1.6rem;
+}
+
+.header--text {
+    flex-basis: content;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    letter-spacing: -0.075em;
+    white-space: nowrap;
+}
+
+main {
+    margin-top: var(--header-height);
+    padding: 1.75em 2.5em;
+    flex-basis: content;
+}
+
+.travel {
+    flex-direction: column; 
+}
+
+.travel--img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.travel--text {
+    color: #2B283A;
+}
+
+.travel--text i {
+    color: #F55A5A;
+}
+
+.location-container {
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.7rem;
+    line-height: 1;
+    margin-top: 2em;
+}
+
+.travel--location {
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.17em;
+}
+
+.travel--google-maps {
+    color: #918E9B; 
+    margin-left: 0.7em;
+}
+
+.travel--google-maps:hover,
+.travel--google-maps:focus {
+    color: #418E9B;
+}
+
+.travel--dates {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.travel--title {
+    margin: 0;
+    color: #2B283A;
+    font-size: 1.7rem;
+    line-height: 2;
+    letter-spacing: 0em;
+    margin-bottom: 0.3em;
+}
+
+.travel--description {
+    font-size: 0.7rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 480px) {
+    .travel {
+        flex-direction: row;
+        border-bottom: 1px solid #F5F5F5; 
+        padding: 1.1em 0;
+        gap: 1.1em;
+        width: fit-content;
+        min-width: 300px;  
+    }
+
+    .travel--img {
+        width: 125px;
+        height: 168px;
+        object-fit: fill;
+        margin: 0 0;
+    }
+}
